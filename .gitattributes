@@ -1,0 +1,4 @@
+# Preserve exact source-input bytes used by the validation manifests.
+# This repository contains both original CRLF inputs and generated LF patches.
+* -text
+*.patch whitespace=-blank-at-eol,cr-at-eol

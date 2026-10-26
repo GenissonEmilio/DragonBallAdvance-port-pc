@@ -1,0 +1,16 @@
+{
+  "zip_crc_valid": true,
+  "all_manifest_file_hashes_equal": true,
+  "archive_sha256": "204a49cab446ff3ac890abee607762377521b59bf2d94e3149205f994bdb8f38",
+  "executable_sha256": "8eb451ec781de045e14d8645e805f48eec4d3546af12ba3f2663770d87195111",
+  "rom_bios_saves_assets_in_archive": false,
+  "nontrivial_64k_rom_resource_blocks_not_embedded": 190,
+  "launcher_from_extracted_zip_passed": true,
+  "paths_with_spaces_passed": true,
+  "headless_frames": 300,
+  "audio_device_disabled_for_launcher_smoke": true,
+  "eeprom_created_bytes": 512,
+  "invalid_rom_rejected_exit_code": 2,
+  "source_sha256": "1f9de73f6fd70d63843f936fc621dc3dd4c2c79b964c4012b489c90294aa429f",
+  "whole_game_validated": false
+}

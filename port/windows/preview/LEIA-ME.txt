@@ -1,0 +1,39 @@
+Dragon Ball: Advanced Adventure - previa Windows x64
+
+1. Extraia este ZIP em uma pasta gravavel. Nao execute dentro do ZIP.
+2. Abra Jogar.cmd. Selecione sua ROM USA BDVE revisao 0 quando solicitado.
+   Voce tambem pode colocar baserom.gba ao lado do executavel ou arrastar uma
+   ROM sobre Jogar.cmd. Nao sao necessarios Python, Git ou um emulador.
+3. A ROM correta tem SHA1: 1338584d8cfa57402603197e65d2e2ff0184d24f.
+
+Controles: setas para mover, Z = A/pular, X = B/atacar, Enter = Start,
+Backspace = Select, A = L e S = R. O controle desta previa e por teclado.
+Feche a janela para sair. O audio usa o dispositivo padrao do Windows/WASAPI.
+
+O save .eep fica junto da ROM, com o mesmo nome. Use uma copia da sua ROM
+em uma pasta de testes para manter saves de outras instalacoes separados.
+Nao copie um save existente por cima de outro sem guardar uma copia.
+
+Esta e uma PRE-RELEASE para testes, nao o port concluido. A primeira fase,
+pausa e retorno ao mapa foram exercitados. Todas as fases, chefes, modos e
+salvamento/recarga do progresso da campanha ainda precisam de teste.
+Ha diferencas conhecidas de estado/temporizacao e a mistura de audio de uma
+sessao completa ainda nao foi comparada integralmente com a ROM.
+O audio ainda pode apresentar cortes: os dois testes atuais registraram
+27 e 3 esvaziamentos do endpoint em sessoes de 5.000 quadros.
+Troca de dispositivo de audio, suspensao e caminhos Unicode nao sao garantidos.
+
+Ao relatar uma falha, informe a fase/tela, os passos para reproduzir, a versao
+do Windows e os arquivos da sessao em logs. Nao envie ROM, BIOS ou recursos
+extraidos. Logs sao locais; este pacote nao envia dados automaticamente.
+Nao ha autoatualizacao nem download de ROM/BIOS.
+
+Codigo, instrucoes de compilacao e limitacoes:
+https://github.com/GenissonEmilio/DragonBallAdvance-port-pc
+
+O executavel usa recompilacao estatica e servicos C nativos. Nao inclui
+interpretador de CPU ARM/Thumb. Precisa da ROM local para dados e recursos.
+Licencas e fontes correspondentes do componente PSG estao em third_party.
+A politica de pastas numeradas de logs foi adaptada de zelda-tmc-3ds,
+com fonte e GPL-3.0-or-later em Sessoes.ps1 e third_party.
+O manifesto e os hashes do pacote estao em manifest.json e SHA256SUMS.txt.

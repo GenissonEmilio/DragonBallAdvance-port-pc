@@ -1,0 +1,107 @@
+{
+  "version": "v0.1.0-preview",
+  "date": "2026-10-26",
+  "executable_sha256": "8eb451ec781de045e14d8645e805f48eec4d3546af12ba3f2663770d87195111",
+  "correctness_gates_passed": true,
+  "whole_game_validated": false,
+  "continuous_audio_passed": false,
+  "native_cpu_interpreter_linked": false,
+  "rom_included": false,
+  "rom_sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "build": {
+    "objects": 108,
+    "clean_source_build": true,
+    "historical_objects_reused": false,
+    "own_build_cache_objects_after_interruption": 16,
+    "compiler_sha256": "e47ff11a48f1dd4546a0e5ae14913ea582f0c77a4c9a48ceb35ad8d2880fe27d",
+    "mgba_commit": "fd9dc5c2cbf234365068855851107e762fc6211b",
+    "translator_commit": "ac1176f467cbb708f58785e65f36b4f091a8ab20",
+    "patch_sha256": "4b13b1aa4a00276f2584f08100bae7c0983597caf3034a6e69b62dfaadab5b58",
+    "build_report_sha256": "2a3f3c1aa6b561e7b6978c6ec3d119f8e2878397566ca0e4260818de6c774f70"
+  },
+  "gba_matching": {
+    "targets": 265,
+    "bytes": 36576,
+    "c_targets": 242,
+    "c_bytes": 33856,
+    "assembly_targets": 23,
+    "assembly_bytes": 2720,
+    "whole_elf_text_compared": true,
+    "generated_translation_counted_as_matching": false,
+    "immutable_legacy_source_and_corpus_audit_passed": true
+  },
+  "video_registers": {
+    "cases": 14,
+    "mismatches": 0
+  },
+  "script_input": {
+    "frames": 12,
+    "reads": 24,
+    "mismatches": 0
+  },
+  "eeprom": {
+    "capacities_kbit": [
+      4,
+      64
+    ],
+    "persistence_equal": true,
+    "campaign_progress_round_trip_validated": false
+  },
+  "rom_graphics_comparison": {
+    "frame": 6000,
+    "rgb_bytes": 115200,
+    "rgb_equal": true,
+    "rgb_sha256": "b4a9949c877dc355ee852cfc3a304ac61016152a7bd51d8eb94b1089e5182f36",
+    "different_bytes_by_region": {
+      "ewram": 160,
+      "iwram": 39,
+      "io": 37,
+      "palette": 0,
+      "vram": 0,
+      "oam": 0
+    },
+    "unshifted_input": true,
+    "private_candidate_full_memory_image_audio_equal": true,
+    "whole_game_validated": false
+  },
+  "wasapi_sessions": [
+    {
+      "frames": 5000,
+      "stereo_samples": 4017590,
+      "pcm_sha256": "3bcfaff8177d383866b0cbcd1e59422c99b897b2b2a4490660d700e757946b7d",
+      "submitted_pcm_equals_offline": true,
+      "endpoint_empty": 27,
+      "continuous_playback_passed": false,
+      "report_sha256": "ea81ace1013a28e685664de246e7de2ac98eda33698cc95b2ebfefee808cf0bd"
+    },
+    {
+      "frames": 5000,
+      "stereo_samples": 4017590,
+      "pcm_sha256": "3bcfaff8177d383866b0cbcd1e59422c99b897b2b2a4490660d700e757946b7d",
+      "submitted_pcm_equals_offline": true,
+      "endpoint_empty": 3,
+      "continuous_playback_passed": false,
+      "report_sha256": "8e8ec477fc96740b651760243e17310bc9252b238d0790abb547fd7a9c104bad"
+    }
+  ],
+  "diagnostic_sessions": {
+    "processes": 12,
+    "concurrent_processes": 4,
+    "checks_passed": true,
+    "source_sha256": "627b51a2343e2668c6ebd7ab05bf7558bd24d28a1961db0c368b38bcb0d4fc2a"
+  },
+  "zelda_reference": {
+    "repository": "https://github.com/EstebanPdN/zelda-tmc-3ds",
+    "commit": "2f248e06ff1e320da8e2d97ef2fe0202a2071fff",
+    "adapted_component": "numbered diagnostic session allocation",
+    "zelda_game_engine_linked": false,
+    "zelda_renderer_linked": false
+  },
+  "known_limitations": [
+    "Audio endpoint emptied 27 and 3 times in the current 5000-frame sessions; continuity not passed",
+    "Whole-campaign progress save/load, bosses, all stages and modes need testing",
+    "RAM and I/O differences remain; whole-game PCM equivalence is unproven",
+    "Some renderer and BIOS services are incomplete; unknown translated entries are fatal",
+    "Controller, Unicode paths, suspend/resume and device switching are not validated"
+  ]
+}

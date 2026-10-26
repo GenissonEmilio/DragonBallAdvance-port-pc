@@ -1,0 +1,247 @@
+{
+  "rom_sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "kind": "Assembly only; excluded from the C matching count",
+  "functions": [
+    {
+      "id": "music_player_update",
+      "name": "MusicPlayer_Update",
+      "address": "0x0810A724",
+      "size": 616,
+      "instruction_bytes": 602,
+      "literal_bytes": 12,
+      "padding_bytes": 2,
+      "source": "asm/music_player_update.s",
+      "internal_symbols": [
+        "_call_via_r3"
+      ]
+    },
+    {
+      "id": "audio_clear64",
+      "name": "Audio_Clear64",
+      "address": "0x0810A4AC",
+      "size": 24,
+      "instruction_bytes": 22,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/audio_clear64.s"
+    },
+    {
+      "id": "sound_copy_command_table",
+      "name": "Sound_CopyCommandTable",
+      "address": "0x0810A514",
+      "size": 52,
+      "instruction_bytes": 46,
+      "literal_bytes": 4,
+      "padding_bytes": 2,
+      "source": "asm/sound_copy_command_table.s",
+      "internal_symbols": [
+        "Sound_FilterAddress",
+        "Sound_ReadByteFiltered"
+      ]
+    },
+    {
+      "id": "sound_update_track",
+      "name": "Sound_UpdateTrack",
+      "address": "0x0810AA00",
+      "size": 512,
+      "instruction_bytes": 502,
+      "literal_bytes": 8,
+      "padding_bytes": 2,
+      "source": "asm/sound_update_track.s"
+    },
+    {
+      "id": "music_event_end_tie",
+      "name": "MusicEvent_EndTie",
+      "address": "0x0810AC00",
+      "size": 64,
+      "instruction_bytes": 64,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_end_tie.s"
+    },
+    {
+      "id": "music_event_lfo_speed",
+      "name": "MusicEvent_LfoSpeed",
+      "address": "0x0810AC68",
+      "size": 20,
+      "instruction_bytes": 18,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_lfo_speed.s"
+    },
+    {
+      "id": "music_event_mod_depth",
+      "name": "MusicEvent_ModDepth",
+      "address": "0x0810AC7C",
+      "size": 20,
+      "instruction_bytes": 18,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_mod_depth.s"
+    },
+    {
+      "id": "music_event_pattern",
+      "name": "MusicEvent_Pattern",
+      "address": "0x0810A574",
+      "size": 28,
+      "instruction_bytes": 26,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_pattern.s"
+    },
+    {
+      "id": "music_event_repeat",
+      "name": "MusicEvent_Repeat",
+      "address": "0x0810A5A4",
+      "size": 48,
+      "instruction_bytes": 46,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_repeat.s"
+    },
+    {
+      "id": "music_read_command_filtered",
+      "name": "Music_ReadCommandFiltered",
+      "address": "0x0810A548",
+      "size": 12,
+      "instruction_bytes": 10,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_read_command_filtered.s"
+    },
+    {
+      "id": "music_event_priority",
+      "name": "MusicEvent_Priority",
+      "address": "0x0810A5D4",
+      "size": 12,
+      "instruction_bytes": 10,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_priority.s"
+    },
+    {
+      "id": "music_event_tempo",
+      "name": "MusicEvent_Tempo",
+      "address": "0x0810A5E0",
+      "size": 20,
+      "instruction_bytes": 20,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_tempo.s"
+    },
+    {
+      "id": "music_event_key_shift",
+      "name": "MusicEvent_KeyShift",
+      "address": "0x0810A5F4",
+      "size": 20,
+      "instruction_bytes": 18,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_key_shift.s"
+    },
+    {
+      "id": "music_event_voice",
+      "name": "MusicEvent_Voice",
+      "address": "0x0810A608",
+      "size": 48,
+      "instruction_bytes": 46,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_voice.s"
+    },
+    {
+      "id": "music_event_volume",
+      "name": "MusicEvent_Volume",
+      "address": "0x0810A638",
+      "size": 20,
+      "instruction_bytes": 18,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_volume.s"
+    },
+    {
+      "id": "music_event_pan",
+      "name": "MusicEvent_Pan",
+      "address": "0x0810A64C",
+      "size": 20,
+      "instruction_bytes": 20,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_pan.s"
+    },
+    {
+      "id": "music_event_pitch_bend",
+      "name": "MusicEvent_PitchBend",
+      "address": "0x0810A660",
+      "size": 20,
+      "instruction_bytes": 20,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_pitch_bend.s"
+    },
+    {
+      "id": "music_event_bend_range",
+      "name": "MusicEvent_BendRange",
+      "address": "0x0810A674",
+      "size": 20,
+      "instruction_bytes": 18,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_bend_range.s"
+    },
+    {
+      "id": "music_event_lfo_delay",
+      "name": "MusicEvent_LfoDelay",
+      "address": "0x0810A688",
+      "size": 12,
+      "instruction_bytes": 10,
+      "literal_bytes": 0,
+      "padding_bytes": 2,
+      "source": "asm/music_event_lfo_delay.s"
+    },
+    {
+      "id": "music_event_mod_type",
+      "name": "MusicEvent_ModType",
+      "address": "0x0810A694",
+      "size": 24,
+      "instruction_bytes": 24,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_mod_type.s"
+    },
+    {
+      "id": "music_event_tune",
+      "name": "MusicEvent_Tune",
+      "address": "0x0810A6AC",
+      "size": 20,
+      "instruction_bytes": 20,
+      "literal_bytes": 0,
+      "padding_bytes": 0,
+      "source": "asm/music_event_tune.s"
+    },
+    {
+      "id": "music_event_port",
+      "name": "MusicEvent_Port",
+      "address": "0x0810A6C0",
+      "size": 24,
+      "instruction_bytes": 20,
+      "literal_bytes": 4,
+      "padding_bytes": 0,
+      "source": "asm/music_event_port.s"
+    },
+    {
+      "id": "sound_main",
+      "name": "Func_0810A084",
+      "address": "0x0810A084",
+      "size": 1064,
+      "source": "asm/sound_main.s",
+      "internal_symbols": [
+        "SoundMainRam",
+        "SoundMain_CallViaR3"
+      ],
+      "instruction_bytes": 1024,
+      "literal_bytes": 32,
+      "padding_bytes": 8
+    }
+  ]
+}

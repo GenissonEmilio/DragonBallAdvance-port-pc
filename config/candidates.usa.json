@@ -1,0 +1,167 @@
+{
+  "rom_sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "status": "Explicitly nonmatching ARM C candidates; excluded from C matching production",
+  "functions": [
+    {
+      "id": "music_player_update",
+      "name": "MusicPlayer_Update",
+      "address": "0x0810A724",
+      "size": 616,
+      "source": "nonmatching/music_player_update.c",
+      "status": "NONMATCHING: full C candidate differs from ROM; excluded from production"
+    },
+    {
+      "id": "sound_update_track",
+      "name": "Sound_UpdateTrack",
+      "address": "0x0810AA00",
+      "size": 512,
+      "source": "nonmatching/sound_update_track.c",
+      "status": "NONMATCHING: original manual register ABI; native C behavior validated separately; GBA assembly owns exact bytes"
+    },
+    {
+      "id": "music_event_end_tie",
+      "name": "MusicEvent_EndTie",
+      "address": "0x0810AC00",
+      "size": 64,
+      "source": "nonmatching/music_event_end_tie.c",
+      "compiler_profile": "gcc346",
+      "status": "NONMATCHING: GBA leaf prologue/epilogue and comparisons differ; exact assembly and native C are separate"
+    },
+    {
+      "id": "music_event_lfo_speed",
+      "name": "MusicEvent_LfoSpeed",
+      "address": "0x0810AC68",
+      "size": 20,
+      "source": "nonmatching/music_event_lfo_speed.c",
+      "status": "NONMATCHING: SDK preserves lr in r12 and returns byte in r3; native C behavior and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_mod_depth",
+      "name": "MusicEvent_ModDepth",
+      "address": "0x0810AC7C",
+      "size": 20,
+      "source": "nonmatching/music_event_mod_depth.c",
+      "status": "NONMATCHING: SDK preserves lr in r12 and returns byte in r3; native C behavior and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_pattern",
+      "name": "MusicEvent_Pattern",
+      "address": "0x0810A574",
+      "size": 28,
+      "source": "nonmatching/music_event_pattern.c",
+      "status": "NONMATCHING: SDK shares tail branches and a custom register ABI; native C and exact GBA assembly are validated separately"
+    },
+    {
+      "id": "music_event_repeat",
+      "name": "MusicEvent_Repeat",
+      "address": "0x0810A5A4",
+      "size": 48,
+      "source": "nonmatching/music_event_repeat.c",
+      "status": "NONMATCHING: SDK shares tail branches and a custom register ABI; native C and exact GBA assembly are validated separately"
+    },
+    {
+      "id": "music_read_command_filtered",
+      "name": "Music_ReadCommandFiltered",
+      "address": "0x0810A548",
+      "size": 12,
+      "source": "nonmatching/music_read_command_filtered.c",
+      "status": "NONMATCHING: SDK shares tail branches and a custom register ABI; native C and exact GBA assembly are validated separately"
+    },
+    {
+      "id": "music_event_priority",
+      "name": "MusicEvent_Priority",
+      "address": "0x0810A5D4",
+      "size": 12,
+      "source": "nonmatching/music_event_priority.c",
+      "status": "NONMATCHING: SDK saves LR in r12 and uses a filtered byte in r3; native C and exact GBA assembly are validated separately"
+    },
+    {
+      "id": "music_event_tempo",
+      "name": "MusicEvent_Tempo",
+      "address": "0x0810A5E0",
+      "size": 20,
+      "source": "nonmatching/music_event_tempo.c",
+      "status": "NONMATCHING: SDK saves LR in r12 and uses a filtered byte in r3; native C and exact GBA assembly are validated separately"
+    },
+    {
+      "id": "music_event_key_shift",
+      "name": "MusicEvent_KeyShift",
+      "address": "0x0810A5F4",
+      "size": 20,
+      "source": "nonmatching/music_event_key_shift.c",
+      "status": "NONMATCHING: SDK saves LR in r12; current C differs in five bytes; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_voice",
+      "name": "MusicEvent_Voice",
+      "address": "0x0810A608",
+      "size": 48,
+      "source": "nonmatching/music_event_voice.c",
+      "status": "NONMATCHING: SDK preserves LR in r12 and filters using its private r2/r3 ABI; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_volume",
+      "name": "MusicEvent_Volume",
+      "address": "0x0810A638",
+      "size": 20,
+      "source": "nonmatching/music_event_volume.c",
+      "status": "NONMATCHING: SDK saves LR in r12 and returns the filtered parameter in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_pan",
+      "name": "MusicEvent_Pan",
+      "address": "0x0810A64C",
+      "size": 20,
+      "source": "nonmatching/music_event_pan.c",
+      "status": "NONMATCHING: SDK saves LR in r12 and uses the filtered byte in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_pitch_bend",
+      "name": "MusicEvent_PitchBend",
+      "address": "0x0810A660",
+      "size": 20,
+      "source": "nonmatching/music_event_pitch_bend.c",
+      "status": "NONMATCHING: SDK saves LR in r12 and uses the filtered byte in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_bend_range",
+      "name": "MusicEvent_BendRange",
+      "address": "0x0810A674",
+      "size": 20,
+      "source": "nonmatching/music_event_bend_range.c",
+      "status": "NONMATCHING: SDK preserves LR in r12 and returns the filtered byte in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_lfo_delay",
+      "name": "MusicEvent_LfoDelay",
+      "address": "0x0810A688",
+      "size": 12,
+      "source": "nonmatching/music_event_lfo_delay.c",
+      "status": "NONMATCHING: SDK preserves LR in r12 and returns the filtered byte in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_mod_type",
+      "name": "MusicEvent_ModType",
+      "address": "0x0810A694",
+      "size": 24,
+      "source": "nonmatching/music_event_mod_type.c",
+      "status": "NONMATCHING: SDK preserves LR in r12 and uses a private filtered-byte ABI; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_tune",
+      "name": "MusicEvent_Tune",
+      "address": "0x0810A6AC",
+      "size": 20,
+      "source": "nonmatching/music_event_tune.c",
+      "status": "NONMATCHING: SDK preserves LR in r12 and returns the filtered byte in r3; native C and exact GBA assembly validated separately"
+    },
+    {
+      "id": "music_event_port",
+      "name": "MusicEvent_Port",
+      "address": "0x0810A6C0",
+      "size": 24,
+      "source": "nonmatching/music_event_port.c",
+      "status": "NONMATCHING: SDK uses LR in r12, destination in r0 and an interior reader entry returning r3; native C and exact assembly validated separately"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Optional isolated CPU/native-C differential validation.
+unicorn==2.1.4

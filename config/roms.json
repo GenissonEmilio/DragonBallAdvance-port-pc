@@ -1,0 +1,9 @@
+{
+  "source": "https://github.com/TASEmulators/BizHawk/blob/master/Assets/gamedb/gamedb_gba.txt",
+  "profiles": [
+    {"region": "USA", "game_code": "BDVE", "sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f"},
+    {"region": "Europe", "game_code": "BDVP", "sha1": "e49ae836b14f84dc8cd817bf912fcdce82d8a587"},
+    {"region": "Japan", "game_code": "BDVJ", "sha1": "bbd47a73717729183f4516e7f2f4afa6756ace44"},
+    {"region": "Korea", "game_code": "BDVK", "sha1": "642d6d5ed9d1c9dcacd59b2f11c07cf54b9cd0e7"}
+  ]
+}

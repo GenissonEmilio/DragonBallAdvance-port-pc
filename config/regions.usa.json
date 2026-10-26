@@ -1,0 +1,14 @@
+{
+  "sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "status": "Initial, incomplete static map; names describe observed behavior and are not original symbols.",
+  "regions": [
+    {"name": "boot_reset", "start": "0x080000C0", "size": "0x34", "kind": "arm", "evidence": "Cartridge entry branches here; configures IRQ/system stacks and branches through literal 0x0810D65D."},
+    {"name": "boot_stack_literals", "start": "0x080000F4", "size": "0x8", "kind": "data", "evidence": "PC-relative stack loads at 0x080000C8 and 0x080000D4."},
+    {"name": "irq_dispatch", "start": "0x080000FC", "size": "0xC4", "kind": "arm", "evidence": "Installed at 0x03007FFC; checks IE/IF, acknowledges selected bit and branches through a handler table."},
+    {"name": "boot_address_literals", "start": "0x080001C0", "size": "0xC", "kind": "data", "evidence": "Words 0x03007FFC, 0x0810D65D and 0x03001F10 referenced by reset/IRQ code."},
+    {"name": "state_increment_word10_if_flag22", "start": "0x0800144C", "size": "0x18", "kind": "thumb", "evidence": "Reads byte at 0x02029F30+0x22; increments word at +0x10 if nonzero; returns via BX. Purpose unconfirmed."},
+    {"name": "state_base_literal", "start": "0x08001464", "size": "0x4", "kind": "data", "evidence": "Literal 0x02029F30 used by function at 0x0800144C."},
+    {"name": "game_entry_trampoline", "start": "0x0800152C", "size": "0xA", "kind": "thumb", "evidence": "Called by startup_thumb; calls 0x08001424 and returns. No game loop inferred here."},
+    {"name": "startup_thumb", "start": "0x0810D65C", "size": "0x12", "kind": "thumb", "evidence": "Reset target uses Thumb bit; calls 0x0810C228, 0x0800152C and 0x0810C90C, then returns."}
+  ]
+}

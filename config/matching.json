@@ -1,0 +1,55 @@
+{
+  "rom_sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "target": {
+    "name": "State_IncrementWord10IfFlag22",
+    "source": "src/state_counter.c",
+    "linker_script": "config/state_counter.ld",
+    "address": "0x0800144C",
+    "instruction_bytes": 24,
+    "literal_bytes": 4
+  },
+  "compiler": {
+    "family": "GCC 2.9-arm-000512 (Thumb/elf), agbcc reconstruction",
+    "source_url": "https://github.com/pret/agbcc.git",
+    "source_commit": "da598c1d918402c42c0c0d7128ba14567f3175e9",
+    "path": "tools/local/agbcc/gcc/agbcc.exe",
+    "flags": [
+      "-O2",
+      "-mthumb-interwork"
+    ]
+  },
+  "arm_tools": {
+    "directory": "tools/local/gcc-arm-none-eabi-8-2018-q4-major/bin",
+    "archive_url": "https://github.com/stm32duino/arm-none-eabi-gcc/releases/download/8-2018-q4-major/gcc-arm-none-eabi-8-2018-q4-major-windows.tar.bz2",
+    "archive_sha256": "12e28bae974b3b270eb977cab28aa9a32928bba285fef45b2597acd06e385e37",
+    "role": "GCC 8 preprocesses only; GNU binutils assemble/link/extract. GCC 8 is not the matching C compiler."
+  },
+  "host_tools": {
+    "directory": "tools/local/w64devkit/bin",
+    "archive_url": "https://github.com/skeeto/w64devkit/releases/download/v2.10.1/w64devkit-x64-2.10.1.7z.exe",
+    "archive_sha256": "add1edf984ce4d473cfeb7c52e0ab38db73a855bba6c7f564d5e16648eb2896a",
+    "role": "Windows host GCC and make build agbcc and GCC 3.4.6 from source; they do not compile the game to ARM."
+  },
+  "compiler_profiles": {
+    "gcc346": {
+      "family": "GCC 3.4.6 Thumb/ARM ELF, alternative matching compiler; not an identification of the historical SDK",
+      "path": "tools/local/gcc346-build/gcc/cc1.exe",
+      "flags": [
+        "-O2",
+        "-mthumb",
+        "-mcpu=arm7tdmi",
+        "-mthumb-interwork",
+        "-fno-reorder-blocks",
+        "-fno-crossjumping",
+        "-fno-thread-jumps",
+        "-fno-gcse",
+        "-fno-loop-optimize"
+      ],
+      "source_url": "https://gcc.gnu.org/ftp/gcc/releases/gcc-3.4.6/gcc-core-3.4.6.tar.bz2",
+      "archive_sha256": "3aab171d86e5a6c14cb9de35467a0472a7d5ef1d5b79a1df72ca533f8e82a133",
+      "assembly_version_regex": "^\\s*\\.ident\\s+\"(GCC: \\(GNU\\) [^\"\\r\\n]+)\"",
+      "assembly_version_prefix": "GCC: (GNU) 3.4.6",
+      "setup": "tools/setup_gcc346.py"
+    }
+  }
+}

@@ -1,0 +1,2272 @@
+{
+  "rom_sha1": "1338584d8cfa57402603197e65d2e2ff0184d24f",
+  "functions": [
+    {
+      "id": "game_bootstrap",
+      "name": "Game_Bootstrap",
+      "source": "src/game_bootstrap.c",
+      "address": "0x08001424",
+      "size": 28
+    },
+    {
+      "id": "game_reset_callback",
+      "name": "Game_ResetVideoStateCallback",
+      "source": "src/game_reset_callback.c",
+      "address": "0x08001440",
+      "size": 12
+    },
+    {
+      "id": "game_entry",
+      "name": "Game_Entry",
+      "source": "src/game_entry.c",
+      "address": "0x0800152C",
+      "size": 12
+    },
+    {
+      "id": "runtime_startup",
+      "name": "Runtime_Startup",
+      "source": "src/runtime_startup.c",
+      "address": "0x0810D65C",
+      "size": 20
+    },
+    {
+      "id": "runtime_main",
+      "name": "Runtime_MainLoop",
+      "source": "src/runtime_main.c",
+      "address": "0x0810C90C",
+      "size": 340
+    },
+    {
+      "id": "game_video_reset",
+      "name": "Game_ResetVideoState",
+      "source": "src/game_video_reset.c",
+      "address": "0x080014D0",
+      "size": 92
+    },
+    {
+      "id": "game_counter_task",
+      "name": "Game_CreateCounterTask",
+      "source": "src/game_counter_task.c",
+      "address": "0x08001468",
+      "size": 104
+    },
+    {
+      "id": "tasks_run",
+      "name": "Tasks_RunFrame",
+      "source": "src/tasks_run.c",
+      "address": "0x0810D94C",
+      "size": 212
+    },
+    {
+      "id": "input_update",
+      "name": "Input_Update",
+      "source": "src/input_update.c",
+      "address": "0x0810D2F8",
+      "size": 240
+    },
+    {
+      "id": "game_initialize",
+      "name": "Game_Initialize",
+      "source": "src/game_initialize.c",
+      "address": "0x08001350",
+      "size": 212
+    },
+    {
+      "id": "runtime_initialize",
+      "name": "Runtime_Initialize",
+      "source": "src/runtime_initialize.c",
+      "address": "0x0810C228",
+      "size": 1764
+    },
+    {
+      "id": "graphics_commit_dma",
+      "name": "Graphics_CommitDma",
+      "source": "src/graphics_commit_dma.c",
+      "address": "0x0810CA60",
+      "size": 724
+    },
+    {
+      "id": "graphics_finish_dma",
+      "name": "Graphics_ClearOamDma",
+      "source": "src/graphics_clear_oam_dma.c",
+      "address": "0x0810CD34",
+      "size": 224
+    },
+    {
+      "id": "graphics_commit_cpu",
+      "name": "Graphics_CommitCpu",
+      "source": "src/graphics_commit_cpu.c",
+      "address": "0x0810CE14",
+      "size": 528
+    },
+    {
+      "id": "graphics_finish_cpu",
+      "name": "Graphics_ClearOamCpu",
+      "source": "src/graphics_clear_oam_cpu.c",
+      "address": "0x0810D5C0",
+      "size": 156
+    },
+    {
+      "id": "tasks_initialize",
+      "name": "Tasks_Initialize",
+      "source": "src/tasks_initialize.c",
+      "address": "0x0810D670",
+      "size": 232
+    },
+    {
+      "id": "oam_process",
+      "name": "Graphics_ProcessOam",
+      "source": "src/graphics_process_oam.c",
+      "address": "0x08111A88",
+      "size": 496,
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "r",
+          "reason": "retain the ascending OAM clear index; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "vram_queue_process",
+      "name": "Graphics_ProcessVramQueue",
+      "source": "src/graphics_process_vram_queue.c",
+      "address": "0x0810D240",
+      "size": 184
+    },
+    {
+      "id": "color_initialize",
+      "name": "Func_08114BA4",
+      "address": "0x08114BA4",
+      "size": 64,
+      "source": "src/color_initialize.c"
+    },
+    {
+      "id": "ewram_heap_initialize",
+      "name": "Func_08115618",
+      "address": "0x08115618",
+      "size": 20,
+      "source": "src/ewram_heap_initialize.c"
+    },
+    {
+      "id": "vram_heap_initialize",
+      "name": "Func_08113C38",
+      "address": "0x08113C38",
+      "size": 40,
+      "source": "src/vram_heap_initialize.c"
+    },
+    {
+      "id": "eeprom_configure",
+      "name": "Func_081156FC",
+      "address": "0x081156FC",
+      "size": 72,
+      "source": "src/eeprom_configure.c"
+    },
+    {
+      "id": "tasks_allocate",
+      "name": "Tasks_AllocateSlot",
+      "address": "0x0810DBD0",
+      "size": 40,
+      "source": "src/tasks_allocate.c"
+    },
+    {
+      "id": "game_service_08102bf4",
+      "name": "Func_08102BF4",
+      "address": "0x08102BF4",
+      "size": 32,
+      "source": "src/game_service_08102bf4.c"
+    },
+    {
+      "id": "game_service_0800c364",
+      "name": "Func_0800C364",
+      "address": "0x0800C364",
+      "size": 12,
+      "source": "src/game_service_0800c364.c"
+    },
+    {
+      "id": "game_service_080043f4",
+      "name": "Func_080043F4",
+      "address": "0x080043F4",
+      "size": 16,
+      "source": "src/game_service_080043f4.c"
+    },
+    {
+      "id": "game_service_080a38cc",
+      "name": "Func_080A38CC",
+      "address": "0x080A38CC",
+      "size": 44,
+      "source": "src/game_service_080a38cc.c"
+    },
+    {
+      "id": "game_service_080a30f8",
+      "name": "Func_080A30F8",
+      "address": "0x080A30F8",
+      "size": 64,
+      "source": "src/game_service_080a30f8.c"
+    },
+    {
+      "id": "audio_main",
+      "name": "Func_0810ADAC",
+      "address": "0x0810ADAC",
+      "size": 12,
+      "source": "src/audio_main.c"
+    },
+    {
+      "id": "graphics_clear_backgrounds",
+      "name": "Graphics_ClearBackgrounds",
+      "address": "0x0810F75C",
+      "size": 612,
+      "source": "src/graphics_clear_backgrounds.c"
+    },
+    {
+      "id": "audio_initialize",
+      "name": "Func_0810AD34",
+      "address": "0x0810AD34",
+      "size": 120,
+      "source": "src/audio_initialize.c"
+    },
+    {
+      "id": "audio_mode",
+      "name": "Func_0810B2D0",
+      "address": "0x0810B2D0",
+      "size": 152,
+      "source": "src/audio_mode.c"
+    },
+    {
+      "id": "serial_initialize",
+      "name": "Func_08113CE0",
+      "address": "0x08113CE0",
+      "size": 244,
+      "source": "src/serial_initialize.c"
+    },
+    {
+      "id": "save_initialize",
+      "name": "Func_08001538",
+      "address": "0x08001538",
+      "size": 152,
+      "source": "src/save_initialize.c"
+    },
+    {
+      "id": "save_reset",
+      "name": "Func_08001D00",
+      "address": "0x08001D00",
+      "size": 152,
+      "source": "src/save_reset.c"
+    },
+    {
+      "id": "save_select",
+      "name": "Func_080030A0",
+      "address": "0x080030A0",
+      "size": 44,
+      "source": "src/save_select.c"
+    },
+    {
+      "id": "save_defaults",
+      "name": "Func_08002AA8",
+      "address": "0x08002AA8",
+      "size": 120,
+      "source": "src/save_defaults.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "r",
+          "register": "r2",
+          "reason": "keep the byte-38 value in the original register; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "+r",
+          "reason": "retain the byte-index shift instead of folding the constant; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "game_services_reset",
+      "name": "Func_080FA048",
+      "address": "0x080FA048",
+      "size": 304,
+      "source": "src/game_services_reset.c"
+    },
+    {
+      "id": "save_read_status",
+      "name": "Func_08001BE4",
+      "address": "0x08001BE4",
+      "size": 284,
+      "source": "src/save_read_status.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "+r",
+          "reason": "keep the checksum zero independent; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "+r; input r; clobbers r2,r3",
+          "reason": "place the timer address before the independent byte zero; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "+r",
+          "register": "r5",
+          "reason": "preserve the EEPROM destination register across both read loops; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "graphics_draw_background_sprites",
+      "name": "Graphics_DrawBackgroundSprites",
+      "address": "0x0810EFB4",
+      "size": 1340,
+      "source": "src/graphics_draw_background_sprites.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "r",
+          "register": "r1",
+          "reason": "keep DMA3 register pointer in r1; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "+r; clobbers r0-r7",
+          "occurrences": 2,
+          "reason": "keep the OAM scratch view opaque and in a high register; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "+r or r",
+          "registers": [
+            "r0",
+            "r1",
+            "r2",
+            "r3",
+            "r5",
+            "r7",
+            "r8"
+          ],
+          "reason": "preserve coordinate, flip-mask and row-stride evaluation order and register lifetimes; all templates are empty"
+        },
+        {
+          "template": "",
+          "constraint": "r",
+          "register": "r1",
+          "reason": "retain the previous packed tile halfword through the affine tail store; emits no instructions"
+        },
+        {
+          "template": "",
+          "constraint": "clobber r7",
+          "reason": "separate reload state on the positive text-row-stride branch; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "graphics_process_background_queue",
+      "name": "Graphics_ProcessBackgroundQueue",
+      "address": "0x0810DDCC",
+      "size": 2868,
+      "source": "src/graphics_process_background_queue.c",
+      "compiler_flags": [
+        "-O1",
+        "-mthumb-interwork"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraints": "r or +r",
+          "reason": "GNU C register-flow constraints; all templates empty and emit no instructions"
+        }
+      ],
+      "label_metadata": {
+        "section": ".debug_dbaa_flow",
+        "entries": 9,
+        "reason": "C label addresses retain basic-block boundaries; linked as non-allocated INFO debug metadata"
+      }
+    },
+    {
+      "id": "task_create",
+      "name": "Task_Create",
+      "address": "0x810d758",
+      "size": 316,
+      "source": "src/task_create.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "r",
+          "reason": "retain the EWRAM failure-pointer address before selecting the data pointer; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "task_destroy",
+      "name": "Task_Destroy",
+      "address": "0x810d894",
+      "size": 184,
+      "source": "src/task_destroy.c"
+    },
+    {
+      "id": "iwram_alloc",
+      "name": "Tasks_IwramAlloc",
+      "address": "0x810da20",
+      "size": 104,
+      "source": "src/iwram_alloc.c"
+    },
+    {
+      "id": "iwram_free",
+      "name": "Tasks_IwramFree",
+      "address": "0x810da88",
+      "size": 124,
+      "source": "src/iwram_free.c"
+    },
+    {
+      "id": "tasks_destroy_priority",
+      "name": "Tasks_DestroyPriorityRange",
+      "address": "0x810dbf8",
+      "size": 120,
+      "source": "src/tasks_destroy_priority.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "constraint": "clobber r5",
+          "reason": "preserve continuation-pointer register allocation; emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "task_head",
+      "name": "Task_HeadSentinel",
+      "address": "0x810dc9c",
+      "size": 4,
+      "source": "src/task_head.c"
+    },
+    {
+      "id": "task_tail",
+      "name": "Task_TailSentinel",
+      "address": "0x810dca0",
+      "size": 4,
+      "source": "src/task_tail.c"
+    },
+    {
+      "id": "task_unused",
+      "name": "Task_UnusedSentinel",
+      "address": "0x810dca4",
+      "size": 4,
+      "source": "src/task_unused.c"
+    },
+    {
+      "id": "ewram_alloc",
+      "name": "Heap_EwramAlloc",
+      "address": "0x811562c",
+      "size": 100,
+      "source": "src/ewram_alloc.c"
+    },
+    {
+      "id": "ewram_free",
+      "name": "Heap_EwramFree",
+      "address": "0x8115690",
+      "size": 108,
+      "source": "src/ewram_free.c"
+    },
+    {
+      "id": "reset_link",
+      "name": "Func_08114D70",
+      "source": "src/reset_link.c",
+      "address": "0x08114D70",
+      "size": 64
+    },
+    {
+      "id": "game_video_flags_clear",
+      "name": "Func_080010C4",
+      "source": "src/game_video_flags_clear.c",
+      "address": "0x080010C4",
+      "size": 12
+    },
+    {
+      "id": "game_video_reset_buffers",
+      "name": "Func_08000FDC",
+      "source": "src/game_video_reset_buffers.c",
+      "address": "0x08000FDC",
+      "size": 64
+    },
+    {
+      "id": "music_stop_all",
+      "name": "Func_0810AEEC",
+      "source": "src/music_stop_all.c",
+      "address": "0x0810AEEC",
+      "size": 44
+    },
+    {
+      "id": "serial_stop",
+      "name": "Serial_Stop",
+      "source": "src/serial_stop.c",
+      "address": "0x08114138",
+      "size": 80
+    },
+    {
+      "id": "serial_resume",
+      "name": "Serial_InstallHandlerAndStart",
+      "source": "src/serial_resume.c",
+      "address": "0x08115434",
+      "size": 40
+    },
+    {
+      "id": "serial_start",
+      "name": "Serial_Start",
+      "source": "src/serial_start.c",
+      "address": "0x08114DB0",
+      "size": 188
+    },
+    {
+      "id": "music_player_stop",
+      "name": "MusicPlayer_Stop",
+      "source": "src/music_player_stop.c",
+      "address": "0x0810B5D0",
+      "size": 64
+    },
+    {
+      "id": "serial_irq",
+      "name": "Serial_IrqHandler",
+      "source": "src/serial_irq.c",
+      "address": "0x08114E6C",
+      "size": 560,
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 7,
+          "reason": "retain the I/O pointer, lane extraction, complemented handshake value, table-index order and live second-lane value; fixed register variables emit no instruction templates"
+        }
+      ]
+    },
+    {
+      "id": "music_track_stop",
+      "name": "MusicTrack_Stop",
+      "source": "src/music_track_stop.c",
+      "address": "0x0810A98C",
+      "size": 68,
+      "compiler_profile": "gcc346",
+      "compiler_flags": [
+        "-O2",
+        "-mthumb",
+        "-mcpu=arm7tdmi",
+        "-mthumb-interwork",
+        "-fno-reorder-blocks",
+        "-fno-crossjumping",
+        "-fno-thread-jumps",
+        "-fno-gcse",
+        "-fno-loop-optimize"
+      ],
+      "linker_script": "config/music_track_stop.ld",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 10,
+          "reason": "retain the original register lifetimes and typed indirect callback; every instruction is emitted by the unmodified GCC 3.4.6 backend"
+        }
+      ]
+    },
+    {
+      "id": "serial_process_packet",
+      "name": "Serial_ProcessPacket",
+      "source": "src/serial_process_packet.c",
+      "address": "0x0811509C",
+      "size": 108
+    },
+    {
+      "id": "serial_validate_packet",
+      "name": "Serial_ValidatePacket",
+      "source": "src/serial_validate_packet.c",
+      "address": "0x08115108",
+      "size": 60,
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the shifted data when extracting the header nibble; empty GNU C constraint emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "serial_make_packet",
+      "name": "Serial_MakePacket",
+      "source": "src/serial_make_packet.c",
+      "address": "0x08115144",
+      "size": 236,
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 5,
+          "reason": "capture incoming r1 for out-of-range stages and retain the packet/type truncations in stages 2 and 3; all five templates are empty"
+        }
+      ]
+    },
+    {
+      "id": "sequence_create",
+      "name": "Func_080C863C",
+      "address": "0x080C863C",
+      "size": 328,
+      "source": "src/sequence_create.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "retain the initial zero and each RAM base when resolving task data; all three templates are empty"
+        }
+      ]
+    },
+    {
+      "id": "sequence_run",
+      "name": "Sequence_Run",
+      "address": "0x080C8784",
+      "size": 196,
+      "source": "src/sequence_run.c"
+    },
+    {
+      "id": "sequence_destroy",
+      "name": "Sequence_OnDestroy",
+      "address": "0x080C88EC",
+      "size": 4,
+      "source": "src/sequence_destroy.c"
+    },
+    {
+      "id": "sequence_finish",
+      "name": "Sequence_Finish",
+      "address": "0x080C88F0",
+      "size": 116,
+      "source": "src/sequence_finish.c"
+    },
+    {
+      "id": "sequence_prepare",
+      "name": "Sequence_Prepare",
+      "address": "0x080C8964",
+      "size": 104,
+      "source": "src/sequence_prepare.c"
+    },
+    {
+      "id": "fade_create",
+      "name": "Func_0800C0C8",
+      "address": "0x0800C0C8",
+      "size": 264,
+      "source": "src/fade_create.c"
+    },
+    {
+      "id": "fade_commit",
+      "name": "ScreenFade_Commit",
+      "address": "0x0800C230",
+      "size": 108,
+      "source": "src/fade_commit.c"
+    },
+    {
+      "id": "fade_run",
+      "name": "ScreenFade_Run",
+      "address": "0x0800C29C",
+      "size": 200,
+      "source": "src/fade_run.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the data pointer in r0 before the commit call, whose body ignores that register; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "fade_destroy",
+      "name": "ScreenFade_OnDestroy",
+      "address": "0x0800C38C",
+      "size": 24,
+      "source": "src/fade_destroy.c"
+    },
+    {
+      "id": "sequence_after_boot",
+      "name": "Sequence_StartAfterBoot",
+      "address": "0x080C8898",
+      "size": 72,
+      "source": "src/sequence_after_boot.c"
+    },
+    {
+      "id": "boot_sequence_initialize",
+      "name": "BootSequence_Initialize",
+      "address": "0x080F3368",
+      "size": 136,
+      "source": "src/boot_sequence_initialize.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the scratch-cell address before its zero store and the BIOS call; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "boot_sequence_destroy",
+      "name": "BootSequence_OnDestroy",
+      "address": "0x080F33F0",
+      "size": 4,
+      "source": "src/boot_sequence_destroy.c"
+    },
+    {
+      "id": "boot_sequence_run",
+      "name": "BootSequence_Run",
+      "address": "0x080F2FD0",
+      "size": 252,
+      "source": "src/boot_sequence_run.c"
+    },
+    {
+      "id": "boot_sequence_finish",
+      "name": "BootSequence_Finish",
+      "address": "0x080F30CC",
+      "size": 140,
+      "source": "src/boot_sequence_finish.c"
+    },
+    {
+      "id": "boot_sequence_begin_fade_out",
+      "name": "BootSequence_BeginFadeOut",
+      "address": "0x080F3158",
+      "size": 80,
+      "source": "src/boot_sequence_begin_fade_out.c"
+    },
+    {
+      "id": "boot_sequence_advance",
+      "name": "BootSequence_Advance",
+      "address": "0x080F31A8",
+      "size": 120,
+      "source": "src/boot_sequence_advance.c"
+    },
+    {
+      "id": "boot_sequence_load_screen",
+      "name": "BootSequence_LoadScreen",
+      "address": "0x080F3220",
+      "size": 328,
+      "source": "src/boot_sequence_load_screen.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 2,
+          "reason": "reserve r9 while the script pointer is live, and reload the asset pointer after setting the DMA destination; both empty templates emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "boot_sequence_update",
+      "name": "BootSequence_Update",
+      "address": "0x080F33F4",
+      "size": 112,
+      "source": "src/boot_sequence_update.c"
+    },
+    {
+      "id": "boot_sequence_start_screen",
+      "name": "BootSequence_StartScreen",
+      "address": "0x080F3464",
+      "size": 68,
+      "source": "src/boot_sequence_start_screen.c"
+    },
+    {
+      "id": "boot_sequence_fade_in",
+      "name": "BootSequence_FadeIn",
+      "address": "0x080F34A8",
+      "size": 80,
+      "source": "src/boot_sequence_fade_in.c"
+    },
+    {
+      "id": "boot_sequence_begin_hold",
+      "name": "BootSequence_BeginHold",
+      "address": "0x080F34F8",
+      "size": 32,
+      "source": "src/boot_sequence_begin_hold.c"
+    },
+    {
+      "id": "boot_sequence_hold",
+      "name": "BootSequence_Hold",
+      "address": "0x080F3518",
+      "size": 48,
+      "source": "src/boot_sequence_hold.c"
+    },
+    {
+      "id": "boot_sequence_fade_out",
+      "name": "BootSequence_FadeOut",
+      "address": "0x080F3548",
+      "size": 52,
+      "source": "src/boot_sequence_fade_out.c"
+    },
+    {
+      "id": "boot_sequence_begin_pause",
+      "name": "BootSequence_BeginPause",
+      "address": "0x080F357C",
+      "size": 48,
+      "source": "src/boot_sequence_begin_pause.c"
+    },
+    {
+      "id": "boot_sequence_clear_screen",
+      "name": "BootSequence_ClearScreen",
+      "address": "0x080F35AC",
+      "size": 68,
+      "source": "src/boot_sequence_clear_screen.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the zero-cell address before storing it and calling CpuSet; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_initialize",
+      "name": "PostBoot_Initialize",
+      "address": "0x080EFAA4",
+      "size": 144,
+      "source": "src/post_boot_initialize.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 2,
+          "reason": "retain the scratch-cell address before zeroing, and the background-table destination in r4; both templates are empty"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_destroy",
+      "name": "PostBoot_OnDestroy",
+      "address": "0x080EE654",
+      "size": 136,
+      "source": "src/post_boot_destroy.c"
+    },
+    {
+      "id": "post_boot_run",
+      "name": "PostBoot_Run",
+      "address": "0x080EE6DC",
+      "size": 308,
+      "source": "src/post_boot_run.c"
+    },
+    {
+      "id": "post_boot_update",
+      "name": "PostBoot_Update",
+      "address": "0x080EE810",
+      "size": 220,
+      "source": "src/post_boot_update.c"
+    },
+    {
+      "id": "post_boot_finish",
+      "name": "PostBoot_Finish",
+      "address": "0x080EE8EC",
+      "size": 164,
+      "source": "src/post_boot_finish.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the scratch-cell address before clearing window shadows; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_prepare_sprites",
+      "name": "PostBoot_PrepareSprites",
+      "address": "0x080EF3B4",
+      "size": 148,
+      "source": "src/post_boot_prepare_sprites.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the config-table base in r0 with the sprite index live before forming the r4 pointer; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_free_sprites",
+      "name": "PostBoot_FreeSprites",
+      "address": "0x080F054C",
+      "size": 48,
+      "source": "src/post_boot_free_sprites.c"
+    },
+    {
+      "id": "post_boot_begin",
+      "name": "PostBoot_Begin",
+      "address": "0x080EFB34",
+      "size": 92,
+      "source": "src/post_boot_begin.c"
+    },
+    {
+      "id": "post_boot_enable_backgrounds",
+      "name": "PostBoot_EnableBackgrounds",
+      "address": "0x080EFB90",
+      "size": 80,
+      "source": "src/post_boot_enable_backgrounds.c"
+    },
+    {
+      "id": "post_boot_disable_backgrounds",
+      "name": "PostBoot_DisableBackgrounds",
+      "address": "0x080EFBE0",
+      "size": 80,
+      "source": "src/post_boot_disable_backgrounds.c"
+    },
+    {
+      "id": "post_boot_load_tiles",
+      "name": "PostBoot_LoadTiles",
+      "address": "0x080F0434",
+      "size": 116,
+      "source": "src/post_boot_load_tiles.c"
+    },
+    {
+      "id": "music_start_song",
+      "name": "Music_StartSong",
+      "address": "0x0810ADB8",
+      "size": 44,
+      "source": "src/music_start_song.c"
+    },
+    {
+      "id": "vram_allocate_tiles",
+      "name": "Vram_AllocateTiles",
+      "address": "0x08113B80",
+      "size": 184,
+      "source": "src/vram_allocate_tiles.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the original tile count in r5 through the rounding addition; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "vram_free_tiles",
+      "name": "Vram_FreeTiles",
+      "address": "0x08113C60",
+      "size": 48,
+      "source": "src/vram_free_tiles.c"
+    },
+    {
+      "id": "post_boot_create_skip",
+      "name": "PostBoot_CreateSkipTask",
+      "address": "0x080F0898",
+      "size": 116,
+      "source": "src/post_boot_create_skip.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the zero-cell address before the 16-byte task-data fill; empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_skip_run",
+      "name": "PostBoot_SkipRun",
+      "address": "0x080EF9BC",
+      "size": 116,
+      "source": "src/post_boot_skip_run.c"
+    },
+    {
+      "id": "post_boot_skip_fade",
+      "name": "PostBoot_SkipFade",
+      "address": "0x080EFA30",
+      "size": 116,
+      "source": "src/post_boot_skip_fade.c"
+    },
+    {
+      "id": "post_boot_skip_destroy",
+      "name": "PostBoot_SkipOnDestroy",
+      "address": "0x080F090C",
+      "size": 4,
+      "source": "src/post_boot_skip_destroy.c"
+    },
+    {
+      "id": "post_boot_phase3",
+      "name": "PostBoot_Phase3",
+      "address": "0x080EFC30",
+      "size": 88,
+      "source": "src/post_boot_phase3.c"
+    },
+    {
+      "id": "post_boot_load_background",
+      "name": "PostBoot_LoadBackground",
+      "address": "0x080EEDB4",
+      "size": 564,
+      "source": "src/post_boot_load_background.c",
+      "compiler_flags": [
+        "-O1",
+        "-mthumb-interwork"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 13,
+          "reason": "retain signed-load values, address/value ordering, explicit low-register moves and palette-call argument scheduling; all templates are empty and emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase4",
+      "name": "PostBoot_Phase4",
+      "address": "0x080EFC88",
+      "size": 80,
+      "source": "src/post_boot_phase4.c"
+    },
+    {
+      "id": "post_boot_phase5",
+      "name": "PostBoot_Phase5",
+      "address": "0x080EFCD8",
+      "size": 24,
+      "source": "src/post_boot_phase5.c"
+    },
+    {
+      "id": "post_boot_phase6",
+      "name": "PostBoot_Phase6",
+      "address": "0x080EFCF0",
+      "size": 96,
+      "source": "src/post_boot_phase6.c"
+    },
+    {
+      "id": "post_boot_phase7",
+      "name": "PostBoot_Phase7",
+      "address": "0x080EFD50",
+      "size": 96,
+      "source": "src/post_boot_phase7.c"
+    },
+    {
+      "id": "post_boot_phase8",
+      "name": "PostBoot_Phase8",
+      "address": "0x080EFDB0",
+      "size": 32,
+      "source": "src/post_boot_phase8.c"
+    },
+    {
+      "id": "post_boot_phase9",
+      "name": "PostBoot_Phase9",
+      "address": "0x080EFDD0",
+      "size": 24,
+      "source": "src/post_boot_phase9.c"
+    },
+    {
+      "id": "post_boot_phase10",
+      "name": "PostBoot_Phase10",
+      "address": "0x080EFDE8",
+      "size": 72,
+      "source": "src/post_boot_phase10.c"
+    },
+    {
+      "id": "post_boot_phase11",
+      "name": "PostBoot_Phase11",
+      "address": "0x080EFE30",
+      "size": 72,
+      "source": "src/post_boot_phase11.c"
+    },
+    {
+      "id": "post_boot_clear_background_map",
+      "name": "PostBoot_ClearBackgroundMap",
+      "address": "0x080F04A8",
+      "size": 56,
+      "source": "src/post_boot_clear_background_map.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the scratch address before storing the fill value; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase12",
+      "name": "PostBoot_Phase12",
+      "address": "0x080EFE78",
+      "size": 24,
+      "source": "src/post_boot_phase12.c"
+    },
+    {
+      "id": "post_boot_phase16",
+      "name": "PostBoot_Phase16",
+      "address": "0x080EFF60",
+      "size": 24,
+      "source": "src/post_boot_phase16.c"
+    },
+    {
+      "id": "post_boot_phase13",
+      "name": "PostBoot_Phase13",
+      "address": "0x080EFE90",
+      "size": 72,
+      "source": "src/post_boot_phase13.c"
+    },
+    {
+      "id": "post_boot_phase14",
+      "name": "PostBoot_Phase14",
+      "address": "0x080EFED8",
+      "size": 72,
+      "source": "src/post_boot_phase14.c"
+    },
+    {
+      "id": "post_boot_phase15",
+      "name": "PostBoot_Phase15",
+      "address": "0x080EFF20",
+      "size": 64,
+      "source": "src/post_boot_phase15.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the scratch address before clearing the window shadow; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase17",
+      "name": "PostBoot_Phase17",
+      "address": "0x080EFF78",
+      "size": 96,
+      "source": "src/post_boot_phase17.c"
+    },
+    {
+      "id": "post_boot_phase18",
+      "name": "PostBoot_Phase18",
+      "address": "0x080EFFD8",
+      "size": 36,
+      "source": "src/post_boot_phase18.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the two original flag tests instead of combining their masks; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_start_fade",
+      "name": "PostBoot_StartFade",
+      "address": "0x080EE9FC",
+      "size": 128,
+      "source": "src/post_boot_start_fade.c"
+    },
+    {
+      "id": "post_boot_create_fade",
+      "name": "PostBoot_CreateFade",
+      "address": "0x080EF448",
+      "size": 168,
+      "source": "src/post_boot_create_fade.c"
+    },
+    {
+      "id": "post_boot_fade_run",
+      "name": "PostBoot_FadeRun",
+      "address": "0x080EF4F0",
+      "size": 120,
+      "source": "src/post_boot_fade_run.c"
+    },
+    {
+      "id": "post_boot_fade_destroy",
+      "name": "PostBoot_FadeOnDestroy",
+      "address": "0x080F057C",
+      "size": 4,
+      "source": "src/post_boot_fade_destroy.c"
+    },
+    {
+      "id": "post_boot_phase19",
+      "name": "PostBoot_Phase19",
+      "address": "0x080EFFFC",
+      "size": 68,
+      "source": "src/post_boot_phase19.c"
+    },
+    {
+      "id": "post_boot_copy_tile_chunk",
+      "name": "PostBoot_CopyTileChunk",
+      "address": "0x080EE990",
+      "size": 108,
+      "source": "src/post_boot_copy_tile_chunk.c"
+    },
+    {
+      "id": "post_boot_phase21",
+      "name": "PostBoot_Phase21",
+      "address": "0x080F0040",
+      "size": 56,
+      "source": "src/post_boot_phase21.c"
+    },
+    {
+      "id": "post_boot_phase25",
+      "name": "PostBoot_Phase25",
+      "address": "0x080F014C",
+      "size": 56,
+      "source": "src/post_boot_phase25.c"
+    },
+    {
+      "id": "post_boot_phase22",
+      "name": "PostBoot_Phase22",
+      "address": "0x080F0078",
+      "size": 112,
+      "source": "src/post_boot_phase22.c"
+    },
+    {
+      "id": "post_boot_phase23",
+      "name": "PostBoot_Phase23",
+      "address": "0x080F00E8",
+      "size": 36,
+      "source": "src/post_boot_phase23.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "retain the two original wait and skip flag tests instead of combining their masks; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase24",
+      "name": "PostBoot_Phase24",
+      "address": "0x080F010C",
+      "size": 64,
+      "source": "src/post_boot_phase24.c"
+    },
+    {
+      "id": "post_boot_load_map",
+      "name": "PostBoot_LoadMap",
+      "address": "0x080EEFE8",
+      "size": 316,
+      "source": "src/post_boot_load_map.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "keep the script pointer outside r9, preserve mirrored-row offset arithmetic and reload the palette selector after its comparison; all templates are empty and emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_load_palette",
+      "name": "PostBoot_LoadPalette",
+      "address": "0x080EF124",
+      "size": 188,
+      "source": "src/post_boot_load_palette.c"
+    },
+    {
+      "id": "post_boot_apply_background",
+      "name": "PostBoot_ApplyBackground",
+      "address": "0x080EF1E0",
+      "size": 80,
+      "source": "src/post_boot_apply_background.c"
+    },
+    {
+      "id": "post_boot_phase26",
+      "name": "PostBoot_Phase26",
+      "address": "0x080F0184",
+      "size": 44,
+      "source": "src/post_boot_phase26.c"
+    },
+    {
+      "id": "post_boot_phase27",
+      "name": "PostBoot_Phase27",
+      "address": "0x080F01B0",
+      "size": 36,
+      "source": "src/post_boot_phase27.c"
+    },
+    {
+      "id": "post_boot_phase28",
+      "name": "PostBoot_Phase28",
+      "address": "0x080F01D4",
+      "size": 56,
+      "source": "src/post_boot_phase28.c"
+    },
+    {
+      "id": "post_boot_phase29",
+      "name": "PostBoot_Phase29",
+      "address": "0x080F020C",
+      "size": 24,
+      "source": "src/post_boot_phase29.c"
+    },
+    {
+      "id": "post_boot_special_background",
+      "name": "PostBoot_LoadSpecialBackground",
+      "address": "0x080EF230",
+      "size": 108,
+      "source": "src/post_boot_special_background.c"
+    },
+    {
+      "id": "post_boot_load_special_tiles",
+      "name": "PostBoot_LoadSpecialTiles",
+      "address": "0x080EF29C",
+      "size": 168,
+      "source": "src/post_boot_load_special_tiles.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 4,
+          "reason": "keep the nine-record bound in r8, the record offset outside r1 and both expanded words in r3; all templates are empty and emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_load_special_map",
+      "name": "PostBoot_LoadSpecialMap",
+      "address": "0x080EF344",
+      "size": 112,
+      "source": "src/post_boot_load_special_map.c"
+    },
+    {
+      "id": "post_boot_load_special_palette",
+      "name": "PostBoot_LoadSpecialPalette",
+      "address": "0x080F04E0",
+      "size": 108,
+      "source": "src/post_boot_load_special_palette.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the scratch address before storing the zero fill value; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase30",
+      "name": "PostBoot_Phase30",
+      "address": "0x080EEA7C",
+      "size": 148,
+      "source": "src/post_boot_phase30.c"
+    },
+    {
+      "id": "post_boot_phase31",
+      "name": "PostBoot_Phase31",
+      "address": "0x080EEB10",
+      "size": 156,
+      "source": "src/post_boot_phase31.c"
+    },
+    {
+      "id": "post_boot_phase32",
+      "name": "PostBoot_Phase32",
+      "address": "0x080F0224",
+      "size": 24,
+      "source": "src/post_boot_phase32.c"
+    },
+    {
+      "id": "post_boot_phase33",
+      "name": "PostBoot_Phase33",
+      "address": "0x080F023C",
+      "size": 24,
+      "source": "src/post_boot_phase33.c"
+    },
+    {
+      "id": "post_boot_create_curtain",
+      "name": "PostBoot_CreateCurtain",
+      "address": "0x080EF568",
+      "size": 232,
+      "source": "src/post_boot_create_curtain.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the scratch address before storing the zero fill value; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_curtain_destroy",
+      "name": "PostBoot_CurtainOnDestroy",
+      "address": "0x080F0580",
+      "size": 4,
+      "source": "src/post_boot_curtain_destroy.c"
+    },
+    {
+      "id": "post_boot_curtain_wait",
+      "name": "PostBoot_CurtainWait",
+      "address": "0x080F0584",
+      "size": 68,
+      "source": "src/post_boot_curtain_wait.c"
+    },
+    {
+      "id": "post_boot_curtain_move",
+      "name": "PostBoot_CurtainMove",
+      "address": "0x080EF650",
+      "size": 260,
+      "source": "src/post_boot_curtain_move.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 5,
+          "reason": "retain the resolved task-data address, zero-cell address, unsigned position, packed comparison value and per-draw y argument; all templates are empty and emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_curtain_hold",
+      "name": "PostBoot_CurtainHold",
+      "address": "0x080EF754",
+      "size": 88,
+      "source": "src/post_boot_curtain_hold.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the per-draw y argument in r0 instead of hoisting a saved-register constant; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_phase34",
+      "name": "PostBoot_Phase34",
+      "address": "0x080EEBAC",
+      "size": 144,
+      "source": "src/post_boot_phase34.c"
+    },
+    {
+      "id": "post_boot_create_scroll",
+      "name": "PostBoot_CreateScroll",
+      "address": "0x080EF7AC",
+      "size": 268,
+      "source": "src/post_boot_create_scroll.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "keep the scratch address before storing the zero fill value; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_scroll_run",
+      "name": "PostBoot_ScrollRun",
+      "address": "0x080EF8B8",
+      "size": 152,
+      "source": "src/post_boot_scroll_run.c"
+    },
+    {
+      "id": "post_boot_scroll_destroy",
+      "name": "PostBoot_ScrollOnDestroy",
+      "address": "0x080F05C8",
+      "size": 4,
+      "source": "src/post_boot_scroll_destroy.c"
+    },
+    {
+      "id": "post_boot_phase35",
+      "name": "PostBoot_Phase35",
+      "address": "0x080F0254",
+      "size": 40,
+      "source": "src/post_boot_phase35.c"
+    },
+    {
+      "id": "post_boot_phase36",
+      "name": "PostBoot_Phase36",
+      "address": "0x080F027C",
+      "size": 88,
+      "source": "src/post_boot_phase36.c"
+    },
+    {
+      "id": "post_boot_phase37",
+      "name": "PostBoot_Phase37",
+      "address": "0x080F02D4",
+      "size": 24,
+      "source": "src/post_boot_phase37.c"
+    },
+    {
+      "id": "post_boot_phase38",
+      "name": "PostBoot_Phase38",
+      "address": "0x080F02EC",
+      "size": 24,
+      "source": "src/post_boot_phase38.c"
+    },
+    {
+      "id": "post_boot_phase39",
+      "name": "PostBoot_Phase39",
+      "address": "0x080EEC3C",
+      "size": 144,
+      "source": "src/post_boot_phase39.c"
+    },
+    {
+      "id": "post_boot_phase40",
+      "name": "PostBoot_Phase40",
+      "address": "0x080F0304",
+      "size": 40,
+      "source": "src/post_boot_phase40.c"
+    },
+    {
+      "id": "post_boot_phase41",
+      "name": "PostBoot_Phase41",
+      "address": "0x080EECCC",
+      "size": 116,
+      "source": "src/post_boot_phase41.c"
+    },
+    {
+      "id": "post_boot_phase47",
+      "name": "PostBoot_Phase47",
+      "address": "0x080EED40",
+      "size": 116,
+      "source": "src/post_boot_phase47.c"
+    },
+    {
+      "id": "post_boot_phase42",
+      "name": "PostBoot_Phase42",
+      "address": "0x080F032C",
+      "size": 60,
+      "source": "src/post_boot_phase42.c"
+    },
+    {
+      "id": "post_boot_phase43",
+      "name": "PostBoot_Phase43",
+      "address": "0x080F0368",
+      "size": 40,
+      "source": "src/post_boot_phase43.c"
+    },
+    {
+      "id": "post_boot_phase44",
+      "name": "PostBoot_Phase44",
+      "address": "0x080F0390",
+      "size": 40,
+      "source": "src/post_boot_phase44.c"
+    },
+    {
+      "id": "post_boot_phase45",
+      "name": "PostBoot_Phase45",
+      "address": "0x080F03B8",
+      "size": 68,
+      "source": "src/post_boot_phase45.c"
+    },
+    {
+      "id": "post_boot_phase46",
+      "name": "PostBoot_Phase46",
+      "address": "0x080F03FC",
+      "size": 28,
+      "source": "src/post_boot_phase46.c"
+    },
+    {
+      "id": "post_boot_phase48",
+      "name": "PostBoot_Phase48",
+      "address": "0x080F0418",
+      "size": 28,
+      "source": "src/post_boot_phase48.c"
+    },
+    {
+      "id": "post_boot_create_ring",
+      "name": "PostBoot_CreateRing",
+      "address": "0x080F05CC",
+      "size": 148,
+      "source": "src/post_boot_create_ring.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "preserve the scratch address before the zero fill store; the empty template emits no instructions"
+        }
+      ]
+    },
+    {
+      "id": "post_boot_ring_destroy",
+      "name": "PostBoot_RingOnDestroy",
+      "address": "0x080F0660",
+      "size": 4,
+      "source": "src/post_boot_ring_destroy.c"
+    },
+    {
+      "id": "post_boot_ring_run",
+      "name": "PostBoot_RingRun",
+      "address": "0x080F0664",
+      "size": 76,
+      "source": "src/post_boot_ring_run.c"
+    },
+    {
+      "id": "post_boot_ring_begin",
+      "name": "PostBoot_RingBegin",
+      "address": "0x080F06B0",
+      "size": 12,
+      "source": "src/post_boot_ring_begin.c"
+    },
+    {
+      "id": "post_boot_ring_init_contract",
+      "name": "PostBoot_RingInitContract",
+      "address": "0x080F06BC",
+      "size": 68,
+      "source": "src/post_boot_ring_init_contract.c"
+    },
+    {
+      "id": "post_boot_ring_contract",
+      "name": "PostBoot_RingContract",
+      "address": "0x080F0700",
+      "size": 56,
+      "source": "src/post_boot_ring_contract.c"
+    },
+    {
+      "id": "post_boot_ring_spin",
+      "name": "PostBoot_RingSpin",
+      "address": "0x080F07AC",
+      "size": 56,
+      "source": "src/post_boot_ring_spin.c"
+    },
+    {
+      "id": "post_boot_ring_hold",
+      "name": "PostBoot_RingHold",
+      "address": "0x080F0738",
+      "size": 48,
+      "source": "src/post_boot_ring_hold.c"
+    },
+    {
+      "id": "post_boot_ring_init_spin",
+      "name": "PostBoot_RingInitSpin",
+      "address": "0x080F0768",
+      "size": 68,
+      "source": "src/post_boot_ring_init_spin.c"
+    },
+    {
+      "id": "post_boot_ring_release",
+      "name": "PostBoot_RingRelease",
+      "address": "0x080F07E4",
+      "size": 76,
+      "source": "src/post_boot_ring_release.c"
+    },
+    {
+      "id": "post_boot_ring_tail",
+      "name": "PostBoot_RingTail",
+      "address": "0x080F0830",
+      "size": 24,
+      "source": "src/post_boot_ring_tail.c"
+    },
+    {
+      "id": "post_boot_ring_step",
+      "name": "PostBoot_RingStep",
+      "address": "0x080F0848",
+      "size": 44,
+      "source": "src/post_boot_ring_step.c"
+    },
+    {
+      "id": "post_boot_ring_draw",
+      "name": "PostBoot_RingDraw",
+      "address": "0x080F0874",
+      "size": 36,
+      "source": "src/post_boot_ring_draw.c"
+    },
+    {
+      "id": "post_boot_position_ring",
+      "name": "PostBoot_PositionRing",
+      "address": "0x080EF950",
+      "size": 108,
+      "source": "src/post_boot_position_ring.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 2,
+          "reason": "retain the shifted unsigned angle and initialized loop index before extracting the base, and keep the per-sprite offset before adding that base; both templates are empty and emit no instructions"
+        }
+      ]
+    },
+    {
+      "id": "graphics_draw_sprite",
+      "name": "Graphics_DrawSprite",
+      "address": "0x08110CA0",
+      "size": 1188,
+      "source": "src/graphics_draw_sprite.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 193,
+          "reason": "expanded empty GNU C constraints preserve register allocation, value lifetimes and original scratch/control flow; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "graphics_allocate_oam",
+      "name": "Graphics_AllocateOam",
+      "address": "0x081119F0",
+      "size": 152,
+      "source": "src/graphics_allocate_oam.c"
+    },
+    {
+      "id": "graphics_load_palette",
+      "name": "Graphics_LoadBgPalette",
+      "address": "0x08114668",
+      "size": 168,
+      "source": "src/graphics_load_palette.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 18,
+          "reason": "expanded empty GNU C constraints preserve register allocation, value lifetimes and original scratch/control flow; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "runtime_memset",
+      "name": "Runtime_Memset",
+      "address": "0x08118508",
+      "size": 84,
+      "source": "src/runtime_memset.c",
+      "compiler_flags": [
+        "-O2"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "expanded empty GNU C constraints preserve register allocation, value lifetimes and original scratch/control flow; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "sprite_update_animation",
+      "name": "Sprite_UpdateAnimation",
+      "address": "0x0810FD70",
+      "size": 244,
+      "source": "src/sprite_update_animation.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 9,
+          "reason": "expanded empty GNU C constraints preserve original register allocation and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "sprite_command_tiles",
+      "name": "SpriteCommand_Tiles",
+      "address": "0x0810FFB8",
+      "size": 144,
+      "source": "src/sprite_command_tiles.c"
+    },
+    {
+      "id": "sprite_command_palette",
+      "name": "SpriteCommand_Palette",
+      "address": "0x08110048",
+      "size": 148,
+      "source": "src/sprite_command_palette.c"
+    },
+    {
+      "id": "sprite_command_jump_back",
+      "name": "SpriteCommand_JumpBack",
+      "address": "0x08111C78",
+      "size": 12,
+      "source": "src/sprite_command_jump_back.c"
+    },
+    {
+      "id": "sprite_command_end",
+      "name": "SpriteCommand_End",
+      "address": "0x08111C84",
+      "size": 16,
+      "source": "src/sprite_command_end.c"
+    },
+    {
+      "id": "sprite_command_sound",
+      "name": "SpriteCommand_Sound",
+      "address": "0x08111C94",
+      "size": 20,
+      "source": "src/sprite_command_sound.c"
+    },
+    {
+      "id": "sprite_command_hitbox",
+      "name": "SpriteCommand_Hitbox",
+      "address": "0x081100DC",
+      "size": 188,
+      "source": "src/sprite_command_hitbox.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 5,
+          "reason": "expanded empty GNU C constraints preserve original register allocation and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "sprite_command_translate",
+      "name": "SpriteCommand_Translate",
+      "address": "0x08111CA8",
+      "size": 28,
+      "source": "src/sprite_command_translate.c"
+    },
+    {
+      "id": "sprite_command_skip",
+      "name": "SpriteCommand_Skip",
+      "address": "0x08111CC4",
+      "size": 12,
+      "source": "src/sprite_command_skip.c"
+    },
+    {
+      "id": "sprite_command_switch",
+      "name": "SpriteCommand_Switch",
+      "address": "0x08111CD0",
+      "size": 24,
+      "source": "src/sprite_command_switch.c"
+    },
+    {
+      "id": "sprite_command_reserved9",
+      "name": "SpriteCommand_Reserved9",
+      "address": "0x08111CE8",
+      "size": 8,
+      "source": "src/sprite_command_reserved9.c"
+    },
+    {
+      "id": "sprite_command_priority",
+      "name": "SpriteCommand_Priority",
+      "address": "0x08111CF0",
+      "size": 28,
+      "source": "src/sprite_command_priority.c"
+    },
+    {
+      "id": "sprite_command_order",
+      "name": "SpriteCommand_Order",
+      "address": "0x08111D0C",
+      "size": 16,
+      "source": "src/sprite_command_order.c"
+    },
+    {
+      "id": "graphics_load_obj_palette",
+      "name": "Graphics_LoadObjPalette",
+      "address": "0x081145C0",
+      "size": 168,
+      "source": "src/graphics_load_obj_palette.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 18,
+          "reason": "expanded empty GNU C constraints preserve original register allocation and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "music_player_start",
+      "name": "MusicPlayer_Start",
+      "address": "0x0810B4EC",
+      "size": 228,
+      "source": "src/music_player_start.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 18,
+          "reason": "expanded empty GNU C constraints preserve original register allocation, scratch registers and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "music_player_open",
+      "name": "MusicPlayer_Open",
+      "address": "0x0810B474",
+      "size": 120,
+      "source": "src/music_player_open.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "expanded empty GNU C constraints preserve original register allocation, scratch registers and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "music_player_clear",
+      "name": "MusicPlayer_Clear",
+      "address": "0x0810B120",
+      "size": 20,
+      "source": "src/music_player_clear.c"
+    },
+    {
+      "id": "sound_vsync_off",
+      "name": "Sound_VSyncOff",
+      "address": "0x0810B3BC",
+      "size": 124,
+      "source": "src/sound_vsync_off.c"
+    },
+    {
+      "id": "sound_vsync_on",
+      "name": "Sound_VSyncOn",
+      "address": "0x0810B438",
+      "size": 60,
+      "source": "src/sound_vsync_on.c"
+    },
+    {
+      "id": "sound_set_frequency",
+      "name": "Sound_SetFrequency",
+      "address": "0x0810B22C",
+      "size": 164,
+      "source": "src/sound_set_frequency.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 9,
+          "reason": "expanded empty GNU C constraints preserve original register allocation, scratch registers and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "sound_initialize",
+      "name": "Sound_Initialize",
+      "address": "0x0810B134",
+      "size": 248,
+      "source": "src/sound_initialize.c"
+    },
+    {
+      "id": "sound_extend",
+      "name": "Sound_Extend",
+      "address": "0x0810AFF0",
+      "size": 280,
+      "source": "src/sound_extend.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 1,
+          "reason": "expanded empty GNU C constraints preserve original allocation, signed operations and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "sound_dummy",
+      "name": "Sound_Dummy",
+      "address": "0x0810C224",
+      "size": 4,
+      "source": "src/sound_dummy.c"
+    },
+    {
+      "id": "cgb_stop",
+      "name": "Cgb_Stop",
+      "address": "0x0810B834",
+      "size": 80,
+      "source": "src/cgb_stop.c",
+      "compiler_flags": [
+        "-O2",
+        "-mthumb-interwork",
+        "-fprologue-bugfix"
+      ]
+    },
+    {
+      "id": "cgb_frequency",
+      "name": "Cgb_CalculateFrequency",
+      "address": "0x0810B78C",
+      "size": 168,
+      "source": "src/cgb_frequency.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 16,
+          "reason": "expanded empty GNU C constraints preserve original allocation, signed operations and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "cgb_update_volume",
+      "name": "Cgb_UpdateVolume",
+      "address": "0x0810B884",
+      "size": 104,
+      "source": "src/cgb_update_volume.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 20,
+          "reason": "expanded empty GNU C constraints preserve original allocation, signed operations and value lifetimes; they emit no instructions",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "cgb_update",
+      "name": "Cgb_Update",
+      "address": "0x0810B8EC",
+      "size": 1100,
+      "source": "src/cgb_update.c",
+      "compiler_flags": [
+        "-O1",
+        "-mthumb-interwork"
+      ],
+      "label_metadata": {
+        "section": ".debug_dbaa_flow",
+        "entries": 15,
+        "reason": "C label addresses retain original basic-block boundaries; linked as non-allocated INFO debugger metadata"
+      },
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 19,
+          "reason": "expanded empty GNU C constraints preserve original allocation and value lifetimes; no instructions are embedded",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "music_fade_out_body",
+      "name": "Music_FadeOutBody",
+      "address": "0x0810B610",
+      "size": 200,
+      "source": "src/music_fade_out_body.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 2,
+          "reason": "expanded empty GNU C constraints preserve original allocation and value lifetimes; no instructions are embedded",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "music_track_update_volume_pitch",
+      "name": "MusicTrack_UpdateVolumePitch",
+      "address": "0x0810B6D8",
+      "size": 180,
+      "source": "src/music_track_update_volume_pitch.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 2,
+          "reason": "expanded empty GNU C constraints preserve original allocation and value lifetimes; no instructions are embedded",
+          "count_basis": "preprocessed_source"
+        }
+      ]
+    },
+    {
+      "id": "audio_unlink_channel",
+      "name": "Audio_UnlinkChannel",
+      "address": "0x0810A4C4",
+      "size": 32,
+      "source": "src/audio_unlink_channel.c",
+      "compiler_flags": [
+        "-O2",
+        "-mthumb-interwork",
+        "-fprologue-bugfix"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 4,
+          "reason": "empty constraints preserve original register lifetimes and allocation; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_fine",
+      "name": "MusicEvent_Fine",
+      "address": "0x0810A4E4",
+      "size": 48,
+      "source": "src/music_event_fine.c",
+      "compiler_profile": "gcc346",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 5,
+          "reason": "empty constraints preserve original register lifetimes and allocation; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_calculate_frequency",
+      "name": "Music_CalculateFrequency",
+      "address": "0x0810AC90",
+      "size": 100,
+      "source": "src/music_calculate_frequency.c"
+    },
+    {
+      "id": "music_clear_modulation",
+      "name": "Music_ClearModulation",
+      "address": "0x0810AC40",
+      "size": 28,
+      "source": "src/music_clear_modulation.c",
+      "compiler_flags": [
+        "-O2",
+        "-mthumb-interwork",
+        "-fprologue-bugfix"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 4,
+          "reason": "empty constraints preserve original register flow; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_read_command_byte",
+      "name": "Music_ReadCommandByte",
+      "address": "0x0810AC5C",
+      "size": 12,
+      "instruction_bytes": 10,
+      "literal_bytes": 0,
+      "source": "src/music_read_command_byte.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 4,
+          "reason": "empty constraints preserve original register flow and the SDK result in r3; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_memory",
+      "name": "MusicEvent_MemoryAccess",
+      "address": "0x0810BFAC",
+      "size": 344,
+      "source": "src/music_event_memory.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 42,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_extended",
+      "name": "MusicEvent_Extended",
+      "address": "0x0810C104",
+      "size": 32,
+      "source": "src/music_event_extended.c"
+    },
+    {
+      "id": "music_event_extended_end",
+      "name": "MusicEvent_ExtendedEnd",
+      "address": "0x0810C124",
+      "size": 20,
+      "source": "src/music_event_extended_end.c"
+    },
+    {
+      "id": "music_event_wave",
+      "name": "MusicEvent_Wave",
+      "address": "0x0810C138",
+      "size": 72,
+      "source": "src/music_event_wave.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 14,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_type",
+      "name": "MusicEvent_Type",
+      "address": "0x0810C180",
+      "size": 20,
+      "source": "src/music_event_type.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_attack",
+      "name": "MusicEvent_Attack",
+      "address": "0x0810C194",
+      "size": 20,
+      "source": "src/music_event_attack.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_decay",
+      "name": "MusicEvent_Decay",
+      "address": "0x0810C1A8",
+      "size": 20,
+      "source": "src/music_event_decay.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_sustain",
+      "name": "MusicEvent_Sustain",
+      "address": "0x0810C1BC",
+      "size": 20,
+      "source": "src/music_event_sustain.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_release",
+      "name": "MusicEvent_Release",
+      "address": "0x0810C1D0",
+      "size": 20,
+      "source": "src/music_event_release.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_echo_volume",
+      "name": "MusicEvent_EchoVolume",
+      "address": "0x0810C1E4",
+      "size": 12,
+      "source": "src/music_event_echo_volume.c"
+    },
+    {
+      "id": "music_event_echo_length",
+      "name": "MusicEvent_EchoLength",
+      "address": "0x0810C1F0",
+      "size": 12,
+      "source": "src/music_event_echo_length.c"
+    },
+    {
+      "id": "music_event_length",
+      "name": "MusicEvent_Length",
+      "address": "0x0810C1FC",
+      "size": 20,
+      "source": "src/music_event_length.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_sweep",
+      "name": "MusicEvent_Sweep",
+      "address": "0x0810C210",
+      "size": 20,
+      "source": "src/music_event_sweep.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_goto",
+      "name": "MusicEvent_Goto",
+      "address": "0x0810A554",
+      "size": 32,
+      "source": "src/music_event_goto.c",
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 4,
+          "reason": "empty GNU C constraints preserve SDK register flow and access order; no instructions embedded"
+        }
+      ]
+    },
+    {
+      "id": "music_event_pattern_end",
+      "name": "MusicEvent_PatternEnd",
+      "address": "0x810a590",
+      "size": 20,
+      "source": "src/music_event_pattern_end.c",
+      "compiler_flags": [
+        "-O2",
+        "-mthumb-interwork",
+        "-fprologue-bugfix"
+      ],
+      "compiler_barriers": [
+        {
+          "template": "",
+          "count": 3,
+          "reason": "empty GNU C constraints preserve SDK register flow; no instructions embedded"
+        }
+      ]
+    }
+  ]
+}
